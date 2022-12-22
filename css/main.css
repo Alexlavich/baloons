@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Roboto";
+  color: #777777;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 50px;
+  background-color: white;
+}
+
+.container {
+  background-color: #f7f7f7;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: url(../pexels-mehmet-turgut-kirkgoz-5865634\ 2.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+.header__logo {
+  position: absolute;
+  padding: 50px 50px;
+}
+.header__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 100%;
+  text-align: center;
+}
+
+.title-first__main {
+  display: block;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: 10px;
+  color: white;
+  margin-bottom: 10px;
+  -webkit-animation-name: leftToRight;
+          animation-name: leftToRight;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.title-first__secondary {
+  display: block;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 48px;
+  letter-spacing: 5px;
+  color: white;
+  -webkit-animation-name: rightToLeft;
+          animation-name: rightToLeft;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 50px;
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  color: #777;
+  background-color: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.4s;
+  position: relative;
+  -webkit-animation-name: downUp;
+          animation-name: downUp;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scale(1.5);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+.btn::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+@-webkit-keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes downUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes downUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=main.css.map */

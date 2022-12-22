@@ -1,0 +1,122 @@
+*, ::before, ::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body 
+    font-weight: 400
+    font-family: "Roboto"
+    color: #777777
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    padding: 5rem
+    background-color: white
+
+.container 
+    background-color: #f7f7f7
+   
+.header 
+    position: relative
+    height: 95vh
+    background: url(../pexels-mehmet-turgut-kirkgoz-5865634\ 2.jpg) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%) 
+    &__logo
+        position: absolute
+        padding: 5rem 5rem
+    &__box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -60%)
+        width: 100%
+        text-align: center
+.title-first
+   
+    &__main
+        display: block
+        font-size: 5rem
+        font-weight: 800
+        line-height: 6rem
+        letter-spacing: 1rem
+        color: #ffff
+        margin-bottom: 1rem
+        animation-name: leftToRight
+        animation-duration: 4s
+        animation-delay: 2s
+        animation-timing-function: ease
+        backface-visibility: hidden
+    &__secondary
+        display: block
+        font-size: 4rem
+        font-weight: 200
+        line-height: 4.8rem
+        letter-spacing: .5rem
+        color: #ffff
+        animation-name: rightToLeft
+        animation-duration: 4s
+        animation-delay: 2s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin-bottom: 5rem
+
+.btn
+    &:link, &:visited
+        text-transform: uppercase
+        text-decoration: none
+        padding: 1.5rem 4rem
+        color: #777
+        background-color: #fff
+        border-radius: 5rem
+        display: inline-block
+        transition: all .4s
+        position: relative
+        animation-name: downUp
+        animation-duration: 3s
+        font-size: 2rem
+    &:hover
+        transform: translateY(-5px)
+        box-shadow: 0rem .4rem .4rem 0rem #0000001A
+        &::after
+            opacity: 0
+            transform: scale(1.5)
+    &:active
+        transform: translateY(-1px)
+    
+    
+    &::after
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display:  inline-block
+        position: absolute
+        top: 0 
+        left: 0
+        z-index: -1
+        transition: all .5s
+
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translateX(-10rem)
+    100%
+        opacity: 1
+        transform: translateX(0rem)    
+@keyframes rightToLebft
+    0%
+        opacity: 0
+        transform: translateX(10rem)
+    100%
+        opacity: 1
+        transform: translateX(0rem) 
+@keyframes downUp
+    0%
+        opacity: 0
+        transform: translateY(10rem)
+    100%
+        opacity: 1
+        transform: translateY(0rem)
